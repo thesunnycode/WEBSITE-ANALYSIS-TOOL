@@ -7,6 +7,10 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
+  // Enable CSS optimization
+  experimental: {
+    optimizeCss: true,
+  },
 };
 
 module.exports = nextConfig;
