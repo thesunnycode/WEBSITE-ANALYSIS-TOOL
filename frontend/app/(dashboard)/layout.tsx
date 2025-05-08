@@ -1,8 +1,8 @@
-'use client';
+"use client";
 
-import { useEffect } from 'react';
-import { useRouter } from 'next/navigation';
-import { useAuth } from '@/contexts/AuthContext';
+import { useEffect } from "react";
+import { useRouter } from "next/navigation";
+import { useAuth } from "@/contexts/AuthContext";
 
 export default function DashboardLayout({
   children,
@@ -14,7 +14,7 @@ export default function DashboardLayout({
 
   useEffect(() => {
     if (!loading && !user) {
-      router.replace('/login');
+      router.replace("/login");
     }
   }, [user, loading, router]);
 
@@ -34,8 +34,8 @@ export default function DashboardLayout({
   }
 
   return (
-    <div className="container mx-auto p-6">
-      {children}
+    <div className="min-h-screen bg-background">
+      <div className="container mx-auto p-6">{children}</div>
     </div>
   );
-} 
+}
