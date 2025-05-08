@@ -7,9 +7,11 @@ const nextConfig = {
   eslint: {
     ignoreDuringBuilds: true,
   },
-  // Enable CSS optimization
+  // Configure output for better Vercel compatibility
+  output: "standalone",
+  // Remove experimental features that might cause issues
   experimental: {
-    optimizeCss: true,
+    // Remove optimizeCss as it's causing issues with Vercel
   },
 };
 
